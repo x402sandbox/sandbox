@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+if [ "$1" = "list" ] || [ "$1" = "help" ]; then
+    echo ""
+    echo "  x402 Sandbox"
+    echo "  ------------------------------------------------------------"
+    echo "  Usage: x402sandbox [command]"
+    echo ""
+    echo "  Available Commands:"
+    echo "    serve           Start the sandbox server (localhost:8402)"
+    echo "  ------------------------------------------------------------"
+    echo ""
+    exit 0
+fi
+
+if [ "$1" = "serve" ]; then
+    echo ""
+    echo "  -------------------------------------------------------"
+    echo "  x402 Sandbox is ready!"
+    echo "  Server running on: http://localhost:8402"
+    echo "  -------------------------------------------------------"
+    echo ""
+
+    shift
+
+    php artisan serve --host=0.0.0.0 --port=8402 --quiet --no-reload
+fi
