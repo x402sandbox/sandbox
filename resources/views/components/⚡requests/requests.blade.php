@@ -1,12 +1,5 @@
-<main class="max-w-[1080px] mx-auto p-4">
-    <section class="flex items-center justify-between gap-8">
-        <a
-            href="https://x402sandbox.com" class="flex items-center space-x-2 rtl:space-x-reverse"
-            title="x402 Sandbox"
-            target="_blank"
-        >
-            <x-brand-logo />
-        </a>
+<div>
+    <section class="flex items-center justify-end gap-8">
         <div class="flex items-center gap-6">
             <x-poll-toggle
                 :active="$polling"
@@ -66,4 +59,4 @@
         </x-log.card>
         @endforeach
     </section>
-</main>
+</div>
