@@ -39,3 +39,22 @@ This command will spin up a local sandbox facilitator.
 ```bash
 x402sandbox serve
 ```
+
+## Features
+
+### Magic Wallets
+
+The sandbox environment comes with wallets that have a deterministic outcome.
+You can use these to easily test that a specific scenario is implemented correctly.
+
+
+|Wallet|Outcome|
+|:-----|:------|
+|The Whale|Never runs out of funds|
+|The Broke|Needs more funds to pay|
+|The Slow|Missing transaction due to network timeouts|
+|The Sanctioned|OFAC restricted wallet, unable to pay|
+|The Reverted|Transaction broadcasts but fails execution|
+
+
+
