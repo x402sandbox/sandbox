@@ -19,10 +19,11 @@ if [ "$1" = "serve" ]; then
     echo "  -------------------------------------------------------"
     echo "  x402 Sandbox is ready!"
     echo "  Server running on: http://localhost:8402"
+    echo "  Facilitator URL: http://localhost:8402/facilitator"
     echo "  -------------------------------------------------------"
     echo ""
 
     shift
 
-    php artisan serve --host=0.0.0.0 --port=8402 --quiet --no-reload
+    php artisan serve --host=0.0.0.0 --port=8402 --env=local --quiet --no-reload
 fi
